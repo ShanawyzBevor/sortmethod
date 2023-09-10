@@ -54,36 +54,37 @@
 
 
 
-     cardContainer.innerHTML = " ";
-     output.data.forEach((news) => {
-         const newDiv = document.createElement('div');
+     const display = () => {
+         cardContainer.innerHTML = " ";
+         output.data.forEach((news) => {
+             const newDiv = document.createElement('div');
 
 
 
 
-         if (news.others.posted_date) {
-             const ConvertTime = news.others.posted_date;
+             if (news.others.posted_date) {
+                 const ConvertTime = news.others.posted_date;
 
-             const unickTime = parseFloat(ConvertTime);
+                 const unickTime = parseFloat(ConvertTime);
 
-             const hour = Math.floor(unickTime / 3600);
+                 const hour = Math.floor(unickTime / 3600);
 
-             const remain = unickTime % 3600;
+                 const remain = unickTime % 3600;
 
-             const minute = Math.floor(remain / 60);
+                 const minute = Math.floor(remain / 60);
 
-             time = `${hour}hrs ${minute}min ago`
+                 time = `${hour}hrs ${minute}min ago`
 
-         } else {
-             time = '';
-         }
-
-
+             } else {
+                 time = '';
+             }
 
 
 
 
-         newDiv.innerHTML = `<div class="card card-compact w-82 bg-base-100  ">
+
+
+             newDiv.innerHTML = `<div class="card card-compact w-82 bg-base-100  ">
          <figure><img class="h-[250px] " src=${news.thumbnail} alt="Shoes" /></figure>
          <div class="absolute top-[160px] right-[9px] bottom-[5px]">
          <p class= "text-white bg-[#0000007F]" >${time}</p>
@@ -112,7 +113,11 @@
 
 
 
-         cardContainer.appendChild(newDiv);
+             cardContainer.appendChild(newDiv);
+         });
+     }
+
+     display();
 
 
 
@@ -120,8 +125,6 @@
 
 
 
-
-     });
 
 
 
@@ -143,24 +146,25 @@
 
 
      document.getElementById("new-event").addEventListener("click", function() {
-         function hello() {
-             console.log(output.data);
-
-             output.data.sort((a, b) => {
-
-                 var viewsA = parseFloat(a.others.views);
-                 var viewsB = parseFloat(b.others.views);
-                 return viewsB - viewsA;
-             });
 
 
 
-         }
-         hello()
+         output.data.sort(function(a, b) {
+
+             var viewsA = parseFloat(a.others.views);
+             var viewsB = parseFloat(b.others.views);
+             return viewsB - viewsA;
+         });
+
+
+         display();
+
+
+
 
      });
 
-     console.log(output.data);
+
 
  };
 

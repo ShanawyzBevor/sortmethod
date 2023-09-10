@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- blog first question -->
+    <div class="text-xl">
+        <h1 class="font-sans font-medium text-xl ml-3">Question:1.Discuss the scope of var, let, and const ? </h1> <br>
+
+        <p class="font-sans font-normal text-lg ml-9 mr-4"> var, let, and const are three keywords used for variable declaration in JavaScript. They differ in terms of scope, hoisting behavior, and mutability. Let's discuss the scope of each of these variable declarations: <br> <br> var : <br> <br> Function
+            Scope: Variables declared with var are function-scoped, meaning they are only accessible within the function in which they are declared. If declared outside of any function, they have global scope. <br> <br> Hoisting: Variables declared with
+            var are hoisted to the top of their containing function or global context. However, their assignment is not hoisted, so they are initialized with undefined until their declaration is reached in the code. <br> <br> Reassignment: Variables declared
+            with var can be reassigned multiple times within their scope . <br> <br></</p>
+
+            <p class="font-sans font-normal text-lg ml-9 mr-4">
+                Let: <br> <br> Block Scope: Variables declared with let have block scope, meaning they are accessible only within the block in which they are declared (block can be a function, loop, or any code enclosed in curly braces {}).<br> <br> Hoisting:
+                Like var, let variables are hoisted to the top of their block but are not initialized. Accessing them before declaration results in a ReferenceError.<br> <br> Reassignment: Variables declared with let can be reassigned within their scope,
+                but they cannot be redeclared within the same block.<br> <br>
+            </p>
+            <p class="font-sans font-normal text-lg ml-9 mr-4">
+                const: <br> <br> Block Scope: Like let, const variables also have block scope.<br> <br> Hoisting: Similar to let, const variables are hoisted to the top of their block but are not initialized. Attempting to access them before declaration
+                results in a ReferenceError.<br> <br> Immutability: Variables declared with const cannot be reassigned after their initial assignment. However, if the variable is an object or an array, the properties or elements of the object or array
+                can be modified.<br> <br>
+            </p>
+    </div>
+
+
+    <div class="text-xl">
+        <h1 class="font-sans font-medium text-xl ml-3">Question:2.Tell us the use cases of null and undefined?</h1> <br>
+        <P class="font-sans font-normal text-lg ml-9 mr-4">
+            null and undefined are two distinct primitive values in JavaScript, and they are often used in different contexts and for different purposes.<br> undefined: <br> <br> 1. undefined is a primitive value that represents the absence of a value
+            or the uninitialized state of a variable.<br> 2. It is typically the default value of function parameters when no argument is provided, and it is also the value assigned to variables that have been declared but have not been assigned a value.<br>            Use Cases: <br> 3. Implicit absence of value: When you want to indicate that a variable or property does not currently have a value or that a function argument is missing. <br> 4. Default parameter values: You can use undefined as the default
+            value for function parameters when you want to allow the caller to omit an argument.<br> 5. Checking for uninitialized variables: You can use typeof or direct comparisons (===) to check if a variable is undefined and take appropriate action.<br>
+        </P> <br>
+        <p class="font-sans font-normal text-lg ml-9 mr-4">
+            null: <br> <br> 1. null is a primitive value that represents the intentional absence of any object value or a value that is explicitly set to signify the absence of an object. <br> 2. It is often used when you want to clear or reset a variable
+            or property that previously held an object reference. <br> Use Cases: <br> 3. Explicitly indicating absence: You can assign null to a variable or property to indicate that it is intentionally empty or devoid of an object reference. <br> 4.
+            Clearing object references: When you want to release memory and resources held by an object, you can set it to null to ensure it can be garbage collected. <br> 5. Checking for an empty object reference: You can check if a variable or property
+            is null to determine if it currently points to an object. <br>
+        </p>
+        <br> <br>
+    </div>
+
+    <div class="text-xl">
+        <h1 class="font-sans font-medium text-xl ml-3">Question:3.What do you mean by REST API? </h1> <br>
+        <p class="font-sans font-normal text-lg ml-9 mr-4">
+            REST API, which stands for Representational State Transfer Application Programming Interface, is a set of architectural principles and constraints used to design and interact with web services. It is a style of software architecture for designing networked
+            applications. REST is not a specific technology or protocol; instead, it's an architectural approach based on a few key principles and constraints: <br> <br> Stateless Communication: In a RESTful architecture, each request from
+            a client to a server must contain all the information needed to understand and process the request. The server should not rely on any previous requests or shared state between client and server. This statelessness simplifies communication
+            and improves scalability. <br> <br> Resource-Based: In REST, everything is treated as a resource, and each resource is identified by a unique URL (Uniform Resource Locator). These URLs are used to interact with and manipulate resources. Resources
+            can represent data objects, services, or any other concept that can be named. <br> <br> HTTP Verbs: REST APIs use standard HTTP methods (or verbs) to perform actions on resources. The most common HTTP methods used in RESTful APIs are: <br>            1. GET: Retrieve data from the server.<br> 2. POST: Create a new resource on the server.<br> 3. PUT: Update an existing resource on the server or create it if it doesn't exist.<br> 4. DELETE: Remove a resource from the server.<br> 5. PATCH:
+            Partially update a resource.<br> <br> Representation: Resources can have multiple representations, such as JSON, XML, HTML, or others. Clients can request a specific representation using the Accept header in the HTTP request. Servers can respond
+            with the requested representation format. <br> <br> Stateless Communication: In a RESTful architecture, each request from a client to a server must contain all the information needed to understand and process the request. The server should
+            not rely on any previous requests or shared state between client and server. This statelessness simplifies communication and improves scalability.<br> <br> Layered System: REST allows for the use of intermediaries, such as load balancers,
+            caches, and gateways, to improve system scalability, security, and performance.<br> <br>
+        </p>
+    </div>
+
+</body>
+
+</html>
